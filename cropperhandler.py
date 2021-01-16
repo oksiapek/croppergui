@@ -40,7 +40,7 @@ class CropperHandler:
 
     # is edge: define it by rgb values
     #  by: rgb-sum (or separate rgb values)
-    def is_edge(self, x : int, y : int):
+    def is_edge(self, x: int, y: int):
         if True:
             _r, _g, _b = self.im.getpixel((x, y))
             if (_r + _g + _b) < self.cRgbBlackSum or (_r + _g + _b) > self.cRgbWhiteSum:
@@ -138,20 +138,31 @@ class CropperHandler:
             _y += 1
         self._limits.append(_y - self.cExtCrop)
 
-        # kuvan pitaisi olla noin 3/4 kuvasuhteessa
-        # suhde= (1.0*(limits[3]-limits[2])) / (1.0*(limits[1]-limits[0]))
-        # if suhde < 0.63 or suhde > 0.67:  #varoita
-        #    print "   -***** ratio <> 3/4 :" + str(suhde)
         return self._limits
 
     def save_crop(self, limits):
         _tofile = self._dir_target + "/" + self.ifile
+        # remove existing
+        if os.path.exists(_tofile):
+            os.unlink(_tofile)
         # crop picture by found edges
         _region = self.im.crop((limits[0], limits[2], limits[1], limits[3]))
         _region.save(_tofile, quality=95)
 
     def get_image(self):
         return self.im
+
+    def change_edge(self, direction, c_val):
+        if direction == "up":
+            self._limits[2] += c_val
+        elif direction == "down":
+            self._limits[3] += c_val
+        elif direction == "left":
+            self._limits[0] += c_val
+        elif direction == "right":
+            self._limits[1] += c_val
+
+        return self._limits
 
 
 # -------------- 'main' code ----------------------

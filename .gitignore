@@ -1,12 +1,7 @@
-croppergui_support.py.bak1
-croppergui_support.py.bak2
-croppergui_support.py.bak3
-croppergui.py.bak1
-croppergui.py.bak2
-croppergui.py.bak3
-croppergui.tcl.bak1
-croppergui.tcl.bak2
-croppergui.tcl.bak3
+*.bak1
+*.bak2
+*.bak3
 AEkonVeneella_8210_009.jpg
 Agadir_8302_011.jpg
 Agadir_8302_011p.jpg
+*.pyc
