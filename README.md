@@ -10,7 +10,7 @@ Gui designed by PAGE (https://sourceforge.net/projects/page/)
 
 usage:
 commandline: cropperhandler filemask
-gui: python croopergui
+gui: python croppergui
 
 limitations:
 - only jpg color pictures with 8-bit color depth
