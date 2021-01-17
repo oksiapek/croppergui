@@ -1,8 +1,7 @@
 *.bak1
 *.bak2
 *.bak3
-AEkonVeneella_8210_009.jpg
-Agadir_8302_011.jpg
-Agadir_8302_011p.jpg
+*.jpg
+!samples/*.jpg
 *.pyc
 *cache*
