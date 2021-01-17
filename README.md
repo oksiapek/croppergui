@@ -9,7 +9,7 @@ This app makes the cropping faster as post process. There is a commandline proce
 Gui designed by PAGE (https://sourceforge.net/projects/page/)
 
 usage:</br>
-  commandline: cropperhandler filemask</br>
+  commandline: python cropperhandler filemask</br>
   gui: python croppergui
 
 limitations:
