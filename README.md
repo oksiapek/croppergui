@@ -5,3 +5,7 @@ While scanning photos/negatives/positives as batch then there usually remains bl
 This app makes the cropping faster as post process. There is a commandline process and python gui.
 
 Gui designed by PAGE
+
+Developed for learning Python.
+
+Pekka.
